@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,500;12..96,600;12..96,700&display=swap');
+
+:root {
+  --bg-dark: #0F1115;
+  --bg-deeper: #0A0D11;
+  --bg-darkest: #080B0F;
+  --accent: #7c3aed;
+  --accent-hover: #6d28d9;
+  --text-primary: #E8E8E6;
+  --text-secondary: #9CA3AF;
+  --text-muted: #6B7280;
+  --border: #1E2530;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: #0F1115;
+  color: #E8E8E6;
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+  line-height: 1.6;
+}
+
+/* Custom selection */
+::selection {
+  background-color: rgba(79, 110, 247, 0.25);
+  color: #E8E8E6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0A0D11;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1E2530;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2A3240;
+}
+
+/* Focus ring */
+:focus-visible {
+  outline: 2px solid rgba(79, 110, 247, 0.6);
+  outline-offset: 2px;
+}
+
+/* Utility layers */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .grid-bg {
+    background-image:
+      linear-gradient(rgba(79, 110, 247, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79, 110, 247, 0.055) 1px, transparent 1px);
+    background-size: 64px 64px;
+  }
+
+  .grid-bg-fine {
+    background-image:
+      linear-gradient(rgba(79, 110, 247, 0.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(79, 110, 247, 0.035) 1px, transparent 1px);
+    background-size: 32px 32px;
+  }
+
+  .mask-radial-fade {
+    mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+    -webkit-mask-image: radial-gradient(ellipse 80% 80% at 50% 50%, black 30%, transparent 100%);
+  }
+}
