@@ -168,7 +168,7 @@ export default function Hero() {
       />
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto max-w-6xl px-6 text-center flex flex-col items-center">
+      <div className="relative z-10 container mx-auto max-w-6xl px-6 pt-24 md:pt-0 text-center flex flex-col items-center">
         <Badge />
 
         <motion.h1
